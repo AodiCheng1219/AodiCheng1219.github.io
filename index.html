@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aodi Cheng - Political Science</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #666;
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
+        .section {
+            margin: 3rem 0;
+            padding: 1rem 0;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 2rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .affiliation {
+            font-size: 1rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2rem;
+            align-items: start;
+            margin-top: 2rem;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 220px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+        }
+
+        .research-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .research-list li {
+            margin: 0.5rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .research-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #666;
+        }
+
+        .papers-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .papers-list li {
+            margin: 1.5rem 0;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .papers-list li:last-child {
+            border-bottom: none;
+        }
+
+        .paper-title {
+            font-weight: bold;
+            font-size: 1.05rem;
+            color: #333;
+            margin-bottom: 0.3rem;
+        }
+
+        .paper-status {
+            color: #666;
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-abstract {
+            margin-top: 0.5rem;
+            line-height: 1.5;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .download-link {
+            color: #333;
+            text-decoration: underline;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
+
+        .download-link:hover {
+            color: #666;
+        }
+
+        .cv-section {
+            text-align: left;
+        }
+
+        .cv-download {
+            color: #333;
+            text-decoration: underline;
+            font-size: 1rem;
+            margin: 1rem 0;
+            display: inline-block;
+        }
+
+        .cv-download:hover {
+            color: #666;
+        }
+
+        .cv-overview {
+            margin-top: 2rem;
+        }
+
+        .cv-overview h4 {
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 1rem 0 0.5rem 0;
+            color: #333;
+        }
+
+        .cv-overview p {
+            margin: 0.3rem 0;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+        }
+
+        .contact-item {
+            margin: 0.5rem 0;
+        }
+
+        .contact-item strong {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .contact-item a {
+            color: #333;
+            text-decoration: underline;
+        }
+
+        .contact-item a:hover {
+            color: #666;
+        }
+
+        footer {
+            border-top: 1px solid #ddd;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h3 {
+            color: #333;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        p {
+            margin: 0.8rem 0;
+            text-align: justify;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .profile-image {
+                margin: 0 auto;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Aodi Cheng</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#papers">Papers</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="home" class="hero">
+            <h1>Aodi Cheng</h1>
+            <p class="subtitle">MA Student in Political Science</p>
+            <p class="affiliation">University of British Columbia, Vancouver, BC</p>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About</h2>
+            <div class="about-grid">
+                <div>
+                    <img src="https://via.placeholder.com/180x220/f5f5f5/333333?text=Photo" alt="Aodi Cheng" class="profile-image">
+                </div>
+                <div>
+                    <p>I am a Master's student in the Department of Political Science at the University of British Columbia. My research interests focus on quantitative methods in political science, with particular attention to political behavior and the political economy of development, especially in the Chinese context.</p>
+                    
+                    <p>My current research examines Chinese public opinion about US-China relations, where I serve as a Graduate Research Assistant for Professor Xiaojun Li. I am particularly interested in applying statistical methods to understand the formation of political attitudes and beliefs, with a focus on the political economy of development in China.</p>
+                    
+                    <p>Prior to graduate school, I completed my MA (SocSci) in Politics with Quantitative Methods (undergraduate degree) at the University of Glasgow, graduating with First Class Honours in 2024.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="section">
+            <h2>Research Interests</h2>
+            <ul class="research-list">
+                <li>Formation of Political Attitudes and Beliefs</li>
+                <li>Party Politics and Political Behavior</li>
+                <li>Political Economy of Development (China)</li>
+                <li>Political Institutions and Incentive Structures</li>
+                <li>Experimental and Quantitative Methods</li>
+                <li>Panel Data and Causal Inference</li>
+                <li>Survey Experiments and Bayesian Methods</li>
+            </ul>
+        </section>
+
+        <section id="papers" class="section">
+            <h2>Working Papers</h2>
+            <ul class="papers-list">
+                <li>
+                    <div class="paper-title">"Decomposing Populist Attitudes: Measurement Debates, Interactive Effects, and Conditional Influence"</div>
+                    <div class="paper-status">Working Paper</div>
+                    <div class="paper-abstract">
+                        Abstract: This paper systematically reviews the major empirical literature on populist attitudes, examining both ideational and discursive approaches. I propose an integrated framework that addresses measurement debates, contextual activation mechanisms, and heterogeneous effects. The analysis reveals how populist attitudes can be decomposed into stable traits, contextual states, and measurement error, offering a unified theoretical foundation for future research.
+                    </div>
+                    <a href="#" class="download-link">[Download PDF]</a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="cv" class="section">
+            <h2>Curriculum Vitae</h2>
+            <div class="cv-section">
+                <p>For a complete overview of my academic background, research experience, and qualifications:</p>
+                <a href="#" class="cv-download">Download CV (PDF)</a>
+                
+                <div class="cv-overview">
+                    <h4>Education</h4>
+                    <p><strong>MA Political Science</strong>, University of British Columbia (Expected 2025)</p>
+                    <p><strong>MA (SocSci) Politics with Quantitative Methods</strong>, University of Glasgow (2024)</p>
+                    <p><em>Undergraduate degree</em> - With Honours of the First Class</p>
+                    
+                    <h4>Research Experience</h4>
+                    <p><strong>Graduate Research Assistant</strong>, Prof. Xiaojun Li, UBC (April 2024 - Present)</p>
+                    <p>Chinese Public Opinion about US-China Relations</p>
+                    
+                    <h4>Teaching Experience</h4>
+                    <p><strong>Graduate Teaching Assistant</strong>, POLI110: Introduction to Scientific Method of Political Analysis</p>
+                    <p>Prof. Matthew Wright (January 2025 - Present), Prof. Michael Weaver (September - December 2024)</p>
+                    
+                    <h4>Technical Skills</h4>
+                    <p><strong>Statistical Software:</strong> R, Stata</p>
+                    <p><strong>Languages:</strong> Chinese (Native), English (Advanced)</p>
+                    <p><strong>Methods:</strong> Regression models, factor analysis, longitudinal data analysis, clustering</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email:</strong> <a href="mailto:AodiCheng@outlook.com">AodiCheng@outlook.com</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Phone:</strong> (+1) 778-955-7823
+                </div>
+                <div class="contact-item">
+                    <strong>Address:</strong><br>
+                    Department of Political Science<br>
+                    University of British Columbia<br>
+                    C425 - 1866 Main Mall<br>
+                    Vancouver, BC V6T 1Z1, Canada
+                </div>
+                <div class="contact-item">
+                    <strong>Academic Profiles:</strong><br>
+                    <a href="#">ORCID</a> | 
+                    <a href="#">Google Scholar</a> | 
+                    <a href="#">ResearchGate</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Aodi Cheng | Last updated: January 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add active class to navigation based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
