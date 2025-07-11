@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -162,6 +162,12 @@
             margin-bottom: 0.5rem;
         }
 
+        .paper-authors {
+            font-size: 0.95rem;
+            color: #495057;
+            margin-bottom: 0.5rem;
+        }
+
         .paper-status {
             font-size: 0.85rem;
             color: #6c757d;
@@ -319,6 +325,7 @@
                 <ul class="nav-menu">
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#research">Research</a></li>
+                    <li><a href="#papers">Working Papers</a></li>
                     <li><a href="#cv">CV</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -358,33 +365,20 @@
                 </ul>
             </section>
 
-            <section id="cv" class="section">
-                <h2>Curriculum Vitae</h2>
-                <div class="cv-section">
-                    <p>For a complete overview of my academic background, research experience, and qualifications:</p>
-                    <a href="CV_AodiCheng.pdf" class="cv-download">Download CV (PDF)</a>
-                    
-                    <div class="cv-overview">
-                        <h4>Education</h4>
-                        <p><strong>MA Political Science</strong>, University of British Columbia (Expected 2025)</p>
-                        <p><strong>MA (SocSci) Politics with Quantitative Methods</strong>, University of Glasgow (2024)</p>
-                        <p><em>Undergraduate degree</em> - With Honours of the First Class</p>
-                        
-                        <h4>Research Experience</h4>
-                        <p><strong>Graduate Research Assistant</strong>, Prof. Xiaojun Li, UBC (April 2024 - Present)</p>
-                        <p>Chinese Public Opinion about US-China Relations</p>
-                        
-                        <h4>Teaching Experience</h4>
-                        <p><strong>Graduate Teaching Assistant</strong>, POLI110: Introduction to Scientific Method of Political Analysis</p>
-                        <p>Prof. Matthew Wright (January 2025 - Present), Prof. Michael Weaver (September - December 2024)</p>
-                        
-                        <h4>Technical Skills</h4>
-                        <p><strong>Statistical Software:</strong> R, Stata</p>
-                        <p><strong>Languages:</strong> Chinese (Native), English (Advanced)</p>
-                        <p><strong>Methods:</strong> Regression models, factor analysis, longitudinal data analysis, clustering</p>
-                    </div>
+            <section id="papers" class="section">
+                <h2>Working Papers</h2>
+                <div class="paper">
+                    <div class="paper-title">WEGM-PC: A Two-Stage Clustering Algorithm for Political Attitude Analysis</div>
+                    <div class="paper-authors">with Lingzhi Tai (London School of Economics)</div>
+                    <div class="paper-status">Working Paper - July 2025</div>
+                    <p class="paper-abstract">
+                        We introduce the Weighted Elliptical Gaussian Mixture Model with Political Constraints (WEGM-PC), a two-stage clustering algorithm tailored to multi-dimensional political-attitude spaces. Its novelty lies in: (i) a K-means-based stabilised initialisation, (ii) exact centre recomputation, and (iii) optimal point reassignment. On synthetic populist-attitude data the model attains an ARI of 0.327 and Purity 0.692 while respecting non-compensatory theoretical constraints, hence avoiding the "moderate-populism" misclassification problem. The algorithm addresses fundamental challenges in political attitude measurement by preventing compensatory relationships between dimensions and ensuring theoretical consistency with political science requirements.
+                    </p>
+                    <a href="WEGM-PC_Cheng_Tai_2025.pdf" class="download-link">Download Paper (PDF)</a>
                 </div>
             </section>
+
+            <section id="cv" class="section">
                 <h2>Curriculum Vitae</h2>
                 <div class="cv-section">
                     <p>For a complete overview of my academic background, research experience, and qualifications:</p>
