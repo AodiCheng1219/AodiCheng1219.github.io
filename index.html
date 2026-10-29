@@ -4,185 +4,53 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aodi Cheng</title>
-<meta name="description" content="Aodi Cheng, PhD student in Political Science at the University of Minnesota. Comparative and international political economy, formal theory, and political methodology.">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --ink:#22262b; --muted:#6a7077; --rule:#e2e5e9; --bg:#fdfdfc; --panel:#f6f6f4;
-  --link:#0b3d91; --accent:#8a1c1c;
-}
-body{font-family:'Times New Roman',Times,serif;font-size:17px;line-height:1.62;color:var(--ink);background:var(--bg)}
-.wrap{max-width:1020px;margin:0 auto;padding:56px 32px 72px;display:grid;grid-template-columns:236px 1fr;gap:56px;align-items:start}
-
-aside{position:sticky;top:56px}
-aside img{width:100%;max-width:200px;display:block;border:1px solid var(--rule)}
-aside .name{font-size:1.5rem;font-weight:700;margin:20px 0 2px;line-height:1.2}
-aside .role{font-size:.94rem;color:var(--muted);line-height:1.45}
-nav{margin:24px 0 0;padding-top:18px;border-top:1px solid var(--rule)}
-nav a{display:block;font-size:.94rem;color:var(--ink);text-decoration:none;padding:3px 0}
-nav a:hover{color:var(--link)}
-aside .contact{margin-top:22px;padding-top:18px;border-top:1px solid var(--rule);font-size:.88rem;color:var(--muted);line-height:1.7}
-aside .contact a{color:var(--link);text-decoration:none}
-aside .contact a:hover{text-decoration:underline}
-
-main h1{font-size:1.05rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700;
-        border-bottom:1px solid var(--rule);padding-bottom:7px;margin:0 0 18px}
-section+section{margin-top:42px}
-p+p{margin-top:12px}
-a{color:var(--link)}
-a:hover{color:var(--accent)}
-
-.lede{font-size:1.02rem}
-ul.plain{list-style:none}
-ul.plain li{padding-left:17px;position:relative;margin-bottom:7px}
-ul.plain li:before{content:"–";position:absolute;left:0;color:var(--muted)}
-
-ol.refs{list-style:none;counter-reset:r}
-ol.refs li{counter-increment:r;position:relative;padding-left:30px;margin-bottom:20px}
-ol.refs li:before{content:counter(r) ".";position:absolute;left:0;top:0;color:var(--muted);font-variant-numeric:tabular-nums}
-.title{font-weight:700}
-.venue{color:var(--muted);font-style:italic}
-.status{display:inline-block;font-size:.8rem;font-style:normal;letter-spacing:.04em;text-transform:uppercase;
-        color:var(--accent);border:1px solid currentColor;padding:1px 6px;margin-left:2px;vertical-align:2px}
-.links{font-size:.9rem;margin-top:3px}
-.links a{margin-right:12px}
-
-dl.cvlist{display:grid;grid-template-columns:1fr auto;gap:4px 20px}
-dl.cvlist dt{font-weight:400}
-dl.cvlist dt b{font-weight:700}
-dl.cvlist dd{color:var(--muted);font-size:.9rem;white-space:nowrap;text-align:right}
-dl.cvlist .sub{grid-column:1/-1;color:var(--muted);font-size:.92rem;margin:-2px 0 10px}
-
-.panel{background:var(--panel);border-left:3px solid var(--rule);padding:16px 20px;font-size:.95rem}
-footer{grid-column:1/-1;margin-top:64px;padding-top:18px;border-top:1px solid var(--rule);
-       font-size:.85rem;color:var(--muted);text-align:center}
-
-@media (max-width:820px){
-  .wrap{grid-template-columns:1fr;gap:34px;padding:34px 22px 56px}
-  aside{position:static;display:grid;grid-template-columns:124px 1fr;gap:4px 22px;align-items:start}
-  aside img{max-width:124px;grid-column:1;grid-row:1/span 2;align-self:start}
-  aside .name{grid-column:2;grid-row:1;margin:0 0 4px;align-self:end}
-  aside .role{grid-column:2;grid-row:2}
-  nav,aside .contact{grid-column:1/-1;margin-top:14px}
-  nav{display:flex;flex-wrap:wrap;gap:0 20px}
-}
-</style>
+<meta name="description" content="Aodi Cheng, Ph.D. student in Political Science at the University of Minnesota. International relations and political economy: strategic bargaining, credible commitments, and bureaucratic accountability.">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+// Old single-page anchors (e.g. /#publications) now live on their own pages.
+(function(){var m={"#publications":"research/#publications","#working-papers":"research/#working-papers",
+"#presentations":"research/#presentations","#teaching":"teaching/","#background":"cv/"};
+if(m[location.hash])location.replace(m[location.hash]);})();
+</script>
 </head>
 <body>
-<div class="wrap">
 
-<aside>
-  <img src="photo.jpg" alt="Aodi Cheng">
-  <div class="name">Aodi Cheng</div>
-  <div class="role">PhD Student<br>Department of Political Science<br>University of Minnesota</div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#publications">Publications</a>
-    <a href="#working-papers">Working Papers</a>
-    <a href="#presentations">Presentations</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#background">Education &amp; Training</a>
-  </nav>
-  <div class="contact">
-    <a href="mailto:che00319@umn.edu">che00319@umn.edu</a><br>
-    Minneapolis, Minnesota<br>
-    <a href="CV_AodiCheng.pdf">Curriculum Vitae</a><br>
-    <a href="https://github.com/AodiCheng1219">GitHub</a>
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="site-title" href="./">Aodi Cheng</a>
+    <nav>
+      <a href="research/">Research</a>
+      <a href="teaching/">Teaching</a>
+      <a href="cv/">CV</a>
+    </nav>
   </div>
+</header>
+
+<div class="page">
+
+<aside class="profile">
+  <img class="avatar" src="assets/avatar.jpg" alt="Aodi Cheng">
+  <div class="name">Aodi Cheng</div>
+  <div class="role">PhD Student in Political Science</div>
+  <ul>
+    <li><svg class="icon"><use href="assets/icons.svg#pin"/></svg>Minneapolis, MN</li>
+    <li><svg class="icon"><use href="assets/icons.svg#institution"/></svg>University of Minnesota</li>
+    <li><svg class="icon"><use href="assets/icons.svg#mail"/></svg><a href="mailto:che00319@umn.edu">che00319@umn.edu</a></li>
+    <li><svg class="icon"><use href="assets/icons.svg#scholar"/></svg><a href="https://scholar.google.com/citations?user=Y2xj0SMAAAAJ&amp;hl=en">Google Scholar</a></li>
+    <li><svg class="icon"><use href="assets/icons.svg#code"/></svg><a href="https://github.com/AodiCheng1219">GitHub</a></li>
+  </ul>
 </aside>
 
 <main>
-
-<section id="about">
-  <h1>About</h1>
-  <p class="lede">My research interests lie in comparative and international political economy, formal theory, and political methodology. I study how political institutions and incentives shape government behavior and policy outcomes, and how domestic politics interacts with international relations.</p>
-  <p>My empirical work draws on survey and administrative data and quasi-experimental designs. My research on China examines how accountability pressures and information asymmetries influence the allocation of public goods. More broadly, I am interested in connecting formal models of political behavior with empirical analysis.</p>
-  <p style="margin-top:20px"><b>Research interests</b></p>
-  <ul class="plain">
-    <li>Comparative and international political economy</li>
-    <li>Political institutions, accountability, and public policy</li>
-    <li>Domestic politics and public opinion in international relations</li>
-    <li>Formal theory and political methodology, particularly causal inference</li>
-  </ul>
-</section>
-
-<section id="publications">
-  <h1>Publications</h1>
-  <ol class="refs">
-    <li>
-      Songying Fang, Xiaojun Li, and Aodi Cheng. 2026.
-      <span class="title">&ldquo;Towards the Global South or the West? The Cognitive Map of a Rising Power.&rdquo;</span>
-      <span class="venue">Third World Quarterly</span>, published online 24 October 2026.
-      <div class="links"><a href="https://doi.org/10.1080/01436597.2026.2743773">Article</a></div>
-    </li>
-    <li>
-      Songying Fang, Xiaojun Li, and Aodi Cheng. 2026.
-      <span class="title">&ldquo;Beyond Rivalry: How Americans and Chinese View Global Justice.&rdquo;</span>
-      <span class="venue">Global Studies Quarterly</span> 6(3): ksag096.
-      <div class="links"><a href="https://doi.org/10.1093/isagsq/ksag096">Article</a> <a href="https://doi.org/10.7910/DVN/VILKRV">Replication package (Harvard Dataverse)</a></div>
-    </li>
-  </ol>
-</section>
-
-<section id="working-papers">
-  <h1>Working Papers</h1>
-  <ol class="refs">
-    <li>
-      <span class="title">&ldquo;Two Digital Worlds: WeChat, Global Platforms, and Chinese Diaspora Foreign Policy Attitude.&rdquo;</span>
-      With Xiaojun Li.
-      <span class="venue">Revise and resubmit, Journal of Contemporary China.</span>
-      <div class="links"><a href="https://www.dropbox.com/scl/fi/4n9087gjdqoxspnoq5dir/JCC_Li_and_Cheng.pdf?rlkey=ti86a9d6sjjt57z6fw4hqqkyg&amp;st=fvmkbgds&amp;raw=1">PDF</a></div>
-    </li>
-    <li>
-      <span class="title">&ldquo;Populist Attitudes in Advanced Democracies: Stability, Contextual Activation, and Measurement Error.&rdquo;</span>
-      <div class="links"><a href="https://www.dropbox.com/scl/fi/pboyu7vhjpkrejue7mpv6/Populist-Attitude-Paper.pdf?rlkey=ll86l3gtokdib95v7eblzaxnh&amp;st=4jx3nan2&amp;dl=0">PDF</a></div>
-    </li>
-    <li>
-      <span class="title">&ldquo;Football and Ideology: The Political Consequences of China&rsquo;s National School Football Program.&rdquo;</span>
-      With Zhengyang Zhou (UBC Economics).
-      <span class="venue">Work in progress.</span>
-    </li>
-  </ol>
-</section>
-
-<section id="presentations">
-  <h1>Conference Presentations</h1>
-  <ol class="refs">
-    <li>
-      <span class="title">&ldquo;Digital Platforms, Identity, and Integration Among Chinese Canadians.&rdquo;</span>
-      With Xiaojun Li. American Political Science Association Annual Meeting, Vancouver, BC, 2025.
-      <div class="links"><a href="https://www.dropbox.com/scl/fi/1541nfx17195kywkeogat/APSA-Paper.pdf?rlkey=joyy6yaonbn1ntwinw4cwdy1w&amp;st=8rooelw6&amp;raw=1">PDF</a></div>
-    </li>
-  </ol>
-</section>
-
-<section id="teaching">
-  <h1>Teaching</h1>
-  <p><b>Graduate Teaching Assistant</b>, Department of Political Science, University of British Columbia.<br>
-  POLI 110: Introduction to the Scientific Method of Political Analysis. Sections for Prof. Michael Weaver (2024&ndash;2026) and Prof. Matthew Wright (2024&ndash;2025).</p>
-  <p class="panel" style="margin-top:14px">The tutorial slides, notes, and exercises I wrote for the course are available at
-  <a href="https://aodicheng1219.github.io/POLI110-A.Cheng-TA-material/">POLI 110 tutorial materials</a>.</p>
-</section>
-
-<section id="background">
-  <h1>Education &amp; Training</h1>
-  <dl class="cvlist">
-    <dt><b>University of Minnesota</b> &middot; PhD in Political Science</dt><dd>2026&ndash;present</dd>
-    <dt><b>University of British Columbia</b> &middot; MA in Political Science</dt><dd>2024&ndash;2026</dd>
-    <dt><b>University of Glasgow</b> &middot; MA (SocSci), Politics with Quantitative Methods, First Class Honours</dt><dd>2020&ndash;2024</dd>
-  </dl>
-
-  <p style="margin-top:26px"><b>Quantitative training</b></p>
-  <p>Graduate (UBC): mathematical statistics, causal inference, and qualitative and Bayesian methods. Undergraduate (Glasgow): linear mixed models; measurement and scaling, including principal components, factor analysis, and multidimensional scaling; advanced regression, including generalized linear and limited dependent variable models; research design; and ordinary least squares.</p>
-
-  <p style="margin-top:20px"><b>Software and languages</b></p>
-  <p>R, Stata, Python (pandas), LaTeX, Git, and Qualtrics. Chinese (native) and English (fluent).</p>
-</section>
-
+  <p>Hello! I am a Ph.D. student in Political Science at the University of Minnesota. My research focuses on international relations and political economy, with particular interests in strategic bargaining, credible commitments, and bureaucratic accountability.</p>
+  <p>My research agenda has two primary focuses. First, I examine how strategic interdependence shapes the credibility of threats and commitments in international bargaining. I am particularly interested in how states&rsquo; own interests constrain their ability to extract concessions: states that provide protection or other benefits may find it difficult to withdraw them when doing so would undermine their own interests.</p>
+  <p>Second, I examine the political economy of bureaucratic accountability and public goods provision. I study how higher-level authorities&rsquo; ability to observe and verify performance shapes bureaucratic incentives and the spatial allocation of public resources. This research asks when stronger accountability improves public goods provision and when it instead redirects resources toward activities and locations that are easier to verify.</p>
+  <p>My other work examines public opinion on international order and foreign policy, including perceptions of global justice and preferences concerning relations with the West and the Global South. Across these areas, I draw on rational-choice theory and quantitative methods, with a broader interest in how information and institutional arrangements shape political incentives and constrain the exercise of power.</p>
 </main>
 
-<footer>Aodi Cheng &middot; Department of Political Science, University of Minnesota</footer>
-
 </div>
+
+<footer><div>&copy; 2026 Aodi Cheng &middot; Department of Political Science, University of Minnesota</div></footer>
+
 </body>
 </html>

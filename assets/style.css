@@ -1,0 +1,83 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#494e52; --strong:#222; --muted:#7a8288; --rule:#eaeaea; --bg:#fff; --panel:#f8f8f8;
+  --link:#2a7aa0; --link-hover:#1b5470;
+}
+html{-webkit-text-size-adjust:100%;scrollbar-gutter:stable}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+     font-size:17px;line-height:1.6;color:var(--ink);background:var(--bg);
+     min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--link)}
+a:hover{color:var(--link-hover)}
+
+/* top bar */
+.masthead{border-bottom:1px solid var(--rule);background:var(--bg)}
+.masthead-inner{max-width:1180px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:56px}
+.site-title{font-weight:700;color:var(--strong);text-decoration:none;font-size:1.05rem;white-space:nowrap}
+.site-title:hover{color:var(--strong)}
+.masthead nav{display:flex;gap:30px}
+.masthead nav a{color:var(--ink);text-decoration:none;font-size:1rem;padding:18px 0 16px;border-bottom:2px solid transparent}
+.masthead nav a:hover{color:var(--strong);border-bottom-color:var(--rule)}
+.masthead nav a[aria-current="page"]{color:var(--strong);border-bottom-color:var(--strong)}
+
+/* page */
+.page{flex:1 0 auto;width:100%;max-width:1180px;margin:0 auto;padding:40px 24px 64px;display:grid;grid-template-columns:200px minmax(0,760px);gap:56px}
+
+/* left profile */
+.profile{position:sticky;top:32px;align-self:start;font-size:.82rem}
+.avatar{width:160px;height:160px;border-radius:50%;object-fit:cover;padding:5px;border:1px solid var(--rule);display:block}
+.profile .name{font-size:1.05rem;font-weight:700;color:var(--strong);margin:18px 0 4px}
+.profile .role{color:var(--ink);line-height:1.45}
+.profile ul{list-style:none;margin-top:16px}
+.profile li{display:flex;align-items:center;gap:9px;margin-bottom:6px;line-height:1.35}
+.profile li a{color:var(--ink);text-decoration:none}
+.profile li a:hover{color:var(--link);text-decoration:underline}
+.icon{width:14px;height:14px;flex:none;stroke:var(--muted);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* content */
+main h1{font-size:1.65rem;color:var(--strong);line-height:1.25;margin-bottom:22px}
+main h2{font-size:1.22rem;color:var(--strong);margin:38px 0 12px}
+main h1+h2{margin-top:0}
+main p+p{margin-top:14px}
+main .lede{font-size:1.05rem}
+main ul{padding-left:22px}
+main ul li{margin-bottom:10px}
+main ul li::marker{color:var(--muted)}
+.venue{font-style:italic}
+.note{color:var(--muted)}
+.extra{font-size:.88rem;white-space:nowrap}
+.panel{background:var(--panel);border-left:3px solid var(--rule);padding:14px 18px;font-size:.95rem;margin-top:16px}
+.button{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--rule);border-radius:4px;padding:6px 14px;
+        text-decoration:none;font-size:.92rem;color:var(--strong)}
+.button:hover{border-color:var(--muted);color:var(--strong)}
+.button .icon{stroke:var(--ink)}
+
+dl.cvlist{display:grid;grid-template-columns:1fr auto;gap:8px 24px}
+dl.cvlist dd{color:var(--muted);font-size:.92rem;white-space:nowrap;text-align:right}
+
+footer{border-top:1px solid var(--rule);background:var(--panel);color:var(--muted);font-size:.82rem}
+footer div{max-width:1180px;margin:0 auto;padding:18px 24px}
+
+/* tablet and phone: profile becomes a header block above the content */
+@media (max-width:860px){
+  .masthead-inner{gap:28px;padding:0 16px}
+  .masthead nav{gap:20px}
+  .page{grid-template-columns:1fr;gap:28px;padding:24px 16px 48px}
+  footer div{padding:16px}
+  .profile{position:static;display:grid;grid-template-columns:88px 1fr;gap:0 18px;align-items:center;
+           padding-bottom:20px;border-bottom:1px solid var(--rule)}
+  .avatar{width:88px;height:88px;padding:3px;grid-row:1/span 2}
+  .profile .name{margin:0 0 2px;align-self:end}
+  .profile .role{align-self:start}
+  .profile ul{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:16px}
+  .profile li{margin:0}
+  main h1{font-size:1.45rem}
+}
+@media (max-width:420px){
+  body{font-size:16px}
+  .masthead-inner{gap:18px}
+  .masthead nav{gap:14px}
+  .masthead nav a{font-size:.95rem}
+  dl.cvlist{grid-template-columns:1fr}
+  dl.cvlist dd{text-align:left;margin:-6px 0 6px}
+}
